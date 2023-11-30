@@ -72,6 +72,12 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
   }
+    #home-text #item2 > #h1 {
+    font-size: 35px;
+  }
+    #home-text #item2 > #h2 {
+    font-size: 32px;
+  }
   #contact-form {
     width: 340px;
     margin-bottom: 10px;
