@@ -61,6 +61,9 @@ body {
 }
 /* Media query untuk layar dengan lebar minimum 414px */
 @media screen and (max-width: 415px) {
+  body{
+     overflow-x: hidden;
+  }
   #home-text {
     margin-top: 20px;
     height: 100%;
@@ -85,6 +88,7 @@ body {
   #contact-map #iframe {
     width: 340px;
   }
+  
 }
 @media screen and (max-width: 600px) {
   .navbar {
