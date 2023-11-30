@@ -1,0 +1,657 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Bebas Neue", sans-serif;
+  overflow-x: hidden;
+  transition: filter 0.5s ease-in-out; /* Add transition for filter */
+}
+
+.blur {
+  filter: blur(5px); /* Add initial blur effect */
+}
+
+.wrapper {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+/* Media query*/
+/* Media query untuk layar dengan lebar minimum 375px */
+@media screen and (max-width: 376px) {
+  .navbar-logo img {
+    width: 100px;
+  }
+  .logo-design img {
+    width: 30px;
+  }
+  /* Home Icon */
+
+  #icon-item {
+    display: flex;
+    flex-direction: row;
+  }
+  #icon-item #item {
+    width: 100px;
+    height: 90px;
+  }
+  #icon-item img {
+    width: 50px;
+  }
+  /* Home text */
+  #home-text #item2 > #h1 {
+    font-size: 45px;
+  }
+  /* Info Image */
+  #info-image {
+    min-height: 150vh;
+  }
+  /* Contact Page */
+
+  /* Iframe */
+  #contact-map #iframe {
+    width: 350px;
+  }
+}
+/* Media query untuk layar dengan lebar minimum 414px */
+@media screen and (max-width: 415px) {
+  #home-text {
+    margin-top: 20px;
+    height: 100%;
+  }
+  #product-item {
+    height: 110vh;
+  }
+  #info-image {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  #contact-form {
+    width: 340px;
+    margin-bottom: 10px;
+  }
+  #contact-map #iframe {
+    width: 340px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar {
+    height: 80px; /* Set to auto for responsiveness */
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    padding-top: 20px; /* Remove padding */
+    row-gap: 20px;
+    height: 800px;
+    margin-top: 880px;
+    position: absolute;
+    width: 100%;
+    margin-left: -50px;
+    background-color: rgba(238, 238, 238, 0.8);
+    display: none;
+    border-radius: 0 0 10px 10px;
+  }
+  .navbar ul li a {
+    font-size: 25px;
+  }
+
+  .navbar ul.show {
+    display: flex; /* Show the list when the 'show' class is added */
+    opacity: 1;
+  }
+
+  .navbar li {
+    text-align: center;
+  }
+
+  .logo-lkpp {
+    display: none;
+  }
+
+  #menu-icon {
+    cursor: pointer;
+    display: flex;
+  }
+}
+/* Media query untuk layar dengan lebar minimum 785px */
+@media screen and (max-width: 785px) {
+  /* Home page */
+  #home-page {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #icon-item > img {
+    width: 5px;
+    background-color: rgb(36, 125, 54);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  #image-item > h1 {
+    color: #cfcfcf;
+    font-size: 45px;
+  }
+  #image-item > img {
+    background-color: #b60909;
+  }
+
+  .item-2 {
+    height: 350px;
+    border-radius: 20px 20px 20px 20px;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  /* Product page*/
+  #product-page-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .product-page-item .image-box {
+    flex-direction: column;
+  }
+  .product-page > h1 {
+    text-align: center;
+  }
+  /* About page */
+  .about-page > .about-page-item {
+    display: flex;
+    flex-direction: column;
+  }
+  #about-page {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+  }
+  .about-page .about-page-item .item1 > p {
+    padding-bottom: 10px;
+  }
+
+  #about-page-item #about > img {
+    max-width: 100%;
+    height: auto;
+  }
+  #about-page #list-about > ul {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+  }
+  #about-page #list-about ul > li {
+    font-size: 30px;
+    text-align: right;
+    align-self: flex-start;
+    padding-left: 80px;
+  }
+  /* Info image */
+  #info-image {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    height: 130vh;
+  }
+  #info-image #box-image img {
+    width: 300px;
+  }
+  #info-image #box-image {
+    min-width: 350px;
+  }
+  #info-image #box-image > h5 {
+    width: 250px;
+  }
+  /* Contact */
+  #contact-form > #form-data {
+    width: 400px;
+  }
+  #contact-form {
+    width: 350px;
+  }
+  #contact-form input {
+    width: 300px;
+  }
+  #contact-form #form-data > #checkbox-container {
+    width: 380px;
+    padding: none;
+    margin: none;
+  }
+  #contact-map .iframe {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1093px) {
+  #about-page-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #about-page #list-about > ul {
+    color: #cfcfcf;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+  #map-contac iframe {
+    width: 300px;
+    height: 300px; /* Sesuaikan dengan tinggi yang diinginkan */
+    flex-wrap: wrap;
+    border: 2rem;
+  }
+  #info-image img {
+    width: 250px;
+  }
+  #info-image #box-image {
+    width: 300px;
+  }
+  /* Contact Map */
+
+  #contact-map .iframe {
+    width: 400px;
+  }
+}
+/* End Media query*/
+/* Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+}
+/* Navigasi Bar */
+nav {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  background-color: #f7f7f7;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 1.5);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+nav ul :hover {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+nav ul li a {
+  padding: 0 10px;
+  font-size: 10px;
+  color: black;
+  width: auto;
+}
+#navbar-logo img {
+  width: 100px;
+}
+/* End Navigasi Bar */
+/* Home */
+.home-page {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin-top: 100px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./images/home.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#home-image {
+  border-radius: 0 20px 20px 0;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.icon-item {
+  display: flex;
+  flex-direction: row;
+}
+.icon-item div {
+  margin-top: 20px;
+  text-align: center; /* Pusatkan teks di dalam setiap div */
+  margin-right: 25px;
+}
+.icon-item img {
+  display: block; /* Atasi masalah space pada elemen inline seperti img */
+  margin: 0 auto; /* Pusatkan ikon di dalam setiap div */
+  width: 60px;
+}
+
+.icon-item span {
+  display: block; /* Membuat teks menjadi blok untuk mengatur tata letak */
+  margin-top: 5px; /* Atur jarak antara ikon dan teks di bagian atas */
+  font-size: 20px; /* Atur ukuran teks */
+  color: #e8e1e1;
+}
+.image-item {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  color: #f6f6f6;
+  height: 30px;
+}
+
+/* ---------------- */
+#home-text {
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 400px;
+}
+#home-text img {
+  align-self: flex-start;
+  padding-bottom: 20px;
+  width: 90px;
+}
+#home-text > .item-2 {
+  text-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 50px;
+  text-align: justify;
+}
+#home-text > .item-2 span {
+  color: #b60909;
+}
+#home-text .item-2 > h2 {
+  color: #3e3e3e;
+}
+#home-text .item-2 > .h1 {
+  font-size: 50px;
+  text-align: left;
+}
+#home-text .item-2 .btn-home {
+  width: 120px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(66, 66, 66);
+  color: #e8e1e1;
+  margin-top: 20px;
+  align-self: center;
+  font-family: "Bebas Neue", sans-serif;
+  transition: background-color 0.3s, transform 0.3s;
+}
+#home-text .item-2 .btn-home:hover {
+  background-color: #3b3b3b;
+  transform: translateY(-8px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.item-2 > h1 {
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+.image-item h1 > span {
+  color: #b60909;
+}
+.image-item > h1 {
+  color: #cfcfcf;
+  font-size: 60px;
+  padding-bottom: 20px;
+}
+.btn-wrapper {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* End Home */
+/* Product */
+.product-page {
+  min-height: 110vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.product-page > h1 {
+  padding-top: 90px;
+  font-size: 30px;
+  text-align: center;
+}
+.product-page-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  position: relative;
+  column-gap: 4rem;
+}
+.product-page-item .image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.product-page-item .image-box img {
+  width: 300px;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+.product-page-item .image-box img:hover {
+  transform: translateY(-15px);
+}
+.product-page-item .image-box {
+  padding: 20px;
+}
+.product-page-item .image-box > h3 {
+  padding-top: 20px;
+}
+.product-page-item .image-box > .img-lkpp {
+  width: 200px;
+  padding-top: 20px;
+}
+/* End Product */
+/* About */
+.about-page {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 100px;
+  background-color: #b60909;
+}
+.about-page .about-page-item > #about1 {
+  text-align: justify;
+  align-items: flex-end;
+}
+.about-page .about-page-item .item1 > p {
+  text-align: justify;
+  padding-top: 20px;
+  line-height: 25px;
+  gap: 15px;
+  color: #d1d1d1;
+  width: 100%;
+  font-family: "Carlito", sans-serif;
+}
+.about-page .about-page-item #about1 > h1 {
+  text-align: start;
+  font-size: 40px;
+  color: #f4f4f4;
+}
+.about-page .about-page-item {
+  padding-top: 80px;
+  width: 100%;
+  column-gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 50px;
+  justify-content: center;
+}
+.about-page .list-about {
+  width: 100%;
+}
+
+.item2 > img {
+  border-radius: 10px;
+}
+/* End About */
+/* Info image */
+.info-image {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+.info-image .box-image {
+  height: 350px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+.info-image .box-image:hover {
+  transform: translateY(-15px);
+}
+.info-image .box-image > img {
+  padding-top: 15px;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+}
+
+.info-image .box-image > h5 {
+  padding-top: 10px;
+  width: 300px;
+  height: 100px;
+  color: #414141;
+  font-size: 15px;
+  align-self: center;
+}
+.info-image .box-image > button {
+  width: 120px;
+  min-height: 30px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(59, 59, 59);
+  color: #e8e1e1;
+  align-self: center;
+  font-family: "Bebas Neue", sans-serif;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+/* End info image */
+/* Contact Us */
+.contact-page {
+  padding: 50px;
+  width: 100%;
+  min-height: 110vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 40px;
+  background-color: rgb(234, 234, 234);
+}
+.contact-form {
+  width: 500px;
+  height: 400px;
+  background-color: rgb(199, 199, 199);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+.form-data {
+  text-align: center;
+}
+.form-data > h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #414141;
+}
+.contact-form .form-data > input {
+  flex-wrap: wrap;
+  width: 450px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 5px;
+  margin: 5px 10px;
+}
+
+.contact-form .form-data > button {
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3b3b3b;
+  color: #f4f4f4;
+}
+.contact-form .form-data > button:hover {
+  background-color: #7b7b7b;
+}
+.iframe {
+  width: 500px;
+  height: 400px;
+  border-radius: 15px;
+}
+/* End Contact Us */
+/* Footer */
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(35, 35, 35);
+  color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: none;
+  bottom: 0%;
+}
+/* End Footer */
